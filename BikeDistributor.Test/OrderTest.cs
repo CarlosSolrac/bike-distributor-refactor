@@ -5,9 +5,15 @@ namespace BikeDistributor.Test
     [TestClass]
     public class OrderTest
     {
-        private readonly static Bike Defy = new Bike("Giant", "Defy 1", Bike.OneThousand);
-        private readonly static Bike Elite = new Bike("Specialized", "Venge Elite", Bike.TwoThousand);
-        private readonly static Bike DuraAce = new Bike("Specialized", "S-Works Venge Dura-Ace", Bike.FiveThousand);
+        public const int OneThousand = 1000;
+        public const int TwoThousand = 2000;
+        public const int FiveThousand = 5000;
+
+        private static BikeDiscounts DiscountOneThousand = new BikeDiscounts();
+
+        private readonly static Bike Defy = new Bike("Giant", "Defy 1", OneThousand);
+        private readonly static Bike Elite = new Bike("Specialized", "Venge Elite", TwoThousand);
+        private readonly static Bike DuraAce = new Bike("Specialized", "S-Works Venge Dura-Ace", FiveThousand);
 
         [TestMethod]
         public void ReceiptOneDefy()

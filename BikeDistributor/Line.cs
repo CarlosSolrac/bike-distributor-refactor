@@ -10,7 +10,7 @@ namespace BikeDistributor
             Quantity = quantity;
             TotalPrice = Bike.Price * quantity;
             DiscountPercentage = bike.Discount(quantity);
-            DiscountAmount = Math.Round(TotalPrice * (1m -DiscountPercentage), 2);
+            DiscountAmount = Math.Round(TotalPrice * DiscountPercentage, 2);
             TotalAmount = TotalPrice - DiscountAmount;
         }
 

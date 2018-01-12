@@ -34,9 +34,14 @@ namespace BikeDistributor
         {
             Debug.Assert(quantity > 0);
 
-            var d = Discounts.Where((arg) => (arg.Key <= quantity)).Max((arg) => arg.Key);
-
-            return Math.Max(d, 0);
+            quantity = 100;
+            var d = Discounts.Where((arg) => (arg.Key <= quantity));
+            if (!d.Any())
+            {
+                return 0;
+            }
+            var k = d.Max((arg) => arg.Key);
+            return d.First((arg) => arg.Key == k).Value;
         }
     }
 }

@@ -24,14 +24,9 @@ namespace BikeDistributor
         public void AddLine(Line line)
         {
             Lines.Add(line);
-        }
-
-        public void CalculateTotal()
-        {
-            SubtotalOrderAmount = Lines.Sum((arg) => arg.TotalAmount);
+            SubtotalOrderAmount += line.TotalAmount;
             TaxAmount = Math.Round(SubtotalOrderAmount * TaxRate, 2);
             TotalOrderAmount = SubtotalOrderAmount + TaxAmount;
         }
-
     }
 }

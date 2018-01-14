@@ -21,10 +21,10 @@ namespace BikeDistributor
             DiscountObj = discounts;
         }
 
-        public decimal Discount(int quantity)
+        public DiscountInfo GetDiscount(int quantity)
         {
             if (DiscountObj is null) 
-                return 0;
+                return new DiscountInfo(DiscountInfo.DiscountTypeFlag.FlatDiscount, 0, null);
             
             return DiscountObj.Discount(quantity);
         }

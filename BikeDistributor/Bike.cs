@@ -24,7 +24,7 @@ namespace BikeDistributor
         public DiscountInfo GetDiscount(int quantity)
         {
             if (DiscountObj is null) 
-                return new DiscountInfo(DiscountInfo.DiscountTypeFlag.FlatDiscount, 0, null);
+                return new DiscountInfo(DiscountInfo.DiscountTypeFlag.None, null, null);
             
             return DiscountObj.Discount(quantity);
         }

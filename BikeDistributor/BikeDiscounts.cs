@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-
+ 
 namespace BikeDistributor
 {
     public class BikeDiscounts
@@ -44,7 +44,7 @@ namespace BikeDistributor
             var d = Discounts.Where((arg) => (arg.Key <= quantity));
             if (!d.Any())
             {
-                return new DiscountInfo(DiscountInfo.DiscountTypeFlag.FlatDiscount, 0, null);
+                return new DiscountInfo(DiscountInfo.DiscountTypeFlag.None, null, null);
             }
             var k = d.Max((arg) => arg.Key);
             return d.First((arg) => arg.Key == k).Value;

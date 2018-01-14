@@ -18,17 +18,33 @@ namespace BikeDistributor
             // Round the numbers to 2 decimal places to make them print nicely
             switch(di.DiscountType)
             {
+                case DiscountInfo.DiscountTypeFlag.None:
+                    TotalDiscountAmount = 0m;
+                    TotalDiscountPercentage = 0m;
+                    break;
+
                 case DiscountInfo.DiscountTypeFlag.FlatDiscount:
+                    UnitDiscountAmount = Math.Round(di.Discount.Value, 2);
                     TotalDiscountAmount = Math.Round(di.Discount.Value * quantity, 2);
                     if (TotalDiscountAmount == 0m)
+                    {
+                        UnitDiscountPercentage = 0m;
                         TotalDiscountPercentage = 0m;
+                    }
                     else
+                    {
+                        UnitDiscountPercentage = Math.Round(UnitDiscountAmount / Bike.Price, 2);
                         TotalDiscountPercentage = Math.Round(TotalDiscountAmount / TotalPrice, 2);
+                    }
                     break;
+
                 case DiscountInfo.DiscountTypeFlag.Percentage:
+                    UnitDiscountPercentage = Math.Round(di.Discount.Value, 2);
                     TotalDiscountPercentage = Math.Round(di.Discount.Value, 2);
+                    UnitDiscountAmount = Math.Round(Bike.Price * UnitDiscountPercentage, 2);
                     TotalDiscountAmount = Math.Round(TotalPrice * TotalDiscountPercentage, 2);
                     break;
+
                 case DiscountInfo.DiscountTypeFlag.Expression:
                     var engine = new Engine();
 
@@ -36,9 +52,12 @@ namespace BikeDistributor
                     engine.SetValue("Quantity", quantity);
                     engine.SetValue("TotalPrice", TotalPrice);
 
-                    var totalDiscount = engine.Execute(di.Expression).GetCompletionValue().AsNumber();
+                    var res = (decimal)engine.Execute(di.Expression).GetCompletionValue().AsNumber();
 
-                    TotalDiscountAmount = Math.Round(TotalPrice - (decimal)totalDiscount, 2);
+                    UnitDiscountAmount = Math.Round((decimal)res, 2);
+                    UnitDiscountPercentage = Math.Round(UnitDiscountAmount / Bike.Price, 2);
+
+                    TotalDiscountAmount = Math.Round(Quantity * UnitDiscountAmount, 2);
                     TotalDiscountPercentage = Math.Round(TotalDiscountAmount / TotalPrice, 2);
                     break;
             }
@@ -50,7 +69,9 @@ namespace BikeDistributor
         public int Quantity { get; private set; }
         public decimal TotalPrice { get; private set; }
         public decimal TotalAmount { get; private set; }
+        public decimal UnitDiscountPercentage { get; private set; }
         public decimal TotalDiscountPercentage { get; private set; }
+        public decimal UnitDiscountAmount { get; private set; }
         public decimal TotalDiscountAmount { get; private set; }
     }
 }

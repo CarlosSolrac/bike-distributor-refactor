@@ -1,0 +1,61 @@
+﻿<html><body>
+<h1>Order Receipt for Test JS Shop</h1>
+<ul>
+	<li>1 x Giant Defy 1 = $1,000.00</li>
+	<li>19 x Giant Defy 1 = $19,000.00</li>
+	<li>20 x Giant Defy 1 = $16,000.00</li>
+	<li>21 x Giant Defy 1 = $16,800.00</li>
+	<li>1 x Specialized Venge Elite = $2,000.00</li>
+	<li>9 x Specialized Venge Elite = $18,000.00</li>
+	<li>10 x Specialized Venge Elite = $14,000.00</li>
+	<li>11 x Specialized Venge Elite = $15,400.00</li>
+	<li>1 x Specialized S-Works Venge Dura-Ace = $5,000.00</li>
+	<li>4 x Specialized S-Works Venge Dura-Ace = $20,000.00</li>
+	<li>5 x Specialized S-Works Venge Dura-Ace = $15,000.00</li>
+	<li>6 x Specialized S-Works Venge Dura-Ace = $18,000.00</li>
+	<li>1 x Specialized Flat S-Works Venge Dura-Ace = $5,000.00</li>
+	<li>6 x Specialized Flat S-Works Venge Dura-Ace = $30,000.00</li>
+	<li>7 x Specialized Flat S-Works Venge Dura-Ace = $33,358.08</li>
+	<li>8 x Specialized Flat S-Works Venge Dura-Ace = $38,123.52</li>
+</ul>
+<h3>Sub-Total: $266,681.60</h3>
+<h3>Tax: $19,334.42</h3>
+<h2>Total: $286,016.02</h2>
+<hr>
+<h1>Order Receipt for Anywhere Bike Shop</h1>
+<ul>
+	<li>1 x Giant Defy 1 = $1,000.00</li>
+	<li>19 x Giant Defy 1 = $19,000.00</li>
+	<li>20 x Giant Defy 1 = $18,000.00</li>
+	<li>21 x Giant Defy 1 = $18,900.00</li>
+	<li>100 x Giant Defy 1 Zero = $100,000.00</li>
+	<li>1 x Specialized Venge Elite = $2,000.00</li>
+	<li>9 x Specialized Venge Elite = $18,000.00</li>
+	<li>10 x Specialized Venge Elite = $16,000.00</li>
+	<li>11 x Specialized Venge Elite = $17,600.00</li>
+	<li>1 x Specialized Flat S-Works Venge Dura-Ace = $4,766.00</li>
+	<li>1 x Specialized S-Works Venge Dura-Ace = $5,000.00</li>
+	<li>4 x Specialized S-Works Venge Dura-Ace = $20,000.00</li>
+	<li>5 x Specialized S-Works Venge Dura-Ace = $20,000.00</li>
+	<li>6 x Specialized S-Works Venge Dura-Ace = $24,000.00</li>
+</ul>
+<h3>Sub-Total: $284,266.00</h3>
+<h3>Tax: $20,609.28</h3>
+<h2>Total: $304,875.28</h2>
+<hr>
+<h1>Order Receipt for Multiple Discounts Shop</h1>
+<ul>
+	<li>1 x MD Multiple Discounts = $5,000.00</li>
+	<li>2 x MD Multiple Discounts = $9,532.00</li>
+	<li>3 x MD Multiple Discounts = $14,298.00</li>
+	<li>4 x MD Multiple Discounts = $18,617.32</li>
+	<li>5 x MD Multiple Discounts = $23,271.65</li>
+	<li>6 x MD Multiple Discounts = $24,000.00</li>
+	<li>7 x MD Multiple Discounts = $28,000.00</li>
+	<li>8 x MD Multiple Discounts = $28,000.00</li>
+	<li>9 x MD Multiple Discounts = $31,500.00</li>
+</ul>
+<h3>Sub-Total: $182,218.97</h3>
+<h3>Tax: $13,210.88</h3>
+<h2>Total: $195,429.85</h2>
+</body></html>

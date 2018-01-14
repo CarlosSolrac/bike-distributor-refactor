@@ -7,7 +7,7 @@ namespace BikeDistributor
 {
     public class BikeDiscounts
     {
-        protected Dictionary<int, DiscountInfo> Discounts = new Dictionary<int, DiscountInfo>();
+        public Dictionary<int, DiscountInfo> Discounts { get; } = new Dictionary<int, DiscountInfo>();
 
         public BikeDiscounts((int quantity, DiscountInfo di)[] arr) => Add(arr);
         public BikeDiscounts(int quantity, DiscountInfo di) => Add(quantity, di);
@@ -34,7 +34,7 @@ namespace BikeDistributor
             }
         }
 
-        public DiscountInfo Discount(int quantity)
+        public DiscountInfo GetDiscount(int quantity)
         {
             Debug.Assert(quantity > 0);
 

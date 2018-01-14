@@ -1,0 +1,34 @@
+﻿[
+  {
+    "Lines": [
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "20": {
+                "DiscountType": "Percentage",
+                "Discount": 0.1,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 1000.0,
+        "TotalAmount": 1000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      }
+    ],
+    "Company": "Anywhere Bike Shop",
+    "TaxRate": 0.0725,
+    "SubtotalOrderAmount": 1000.0,
+    "TaxAmount": 72.50,
+    "TotalOrderAmount": 1072.50
+  }
+]

@@ -60,6 +60,20 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExpectedResults\HtmlReceiptMultipleOrders.txt" />
+    <Content Include="ExpectedResults\HtmlReceiptOneDefy.txt" />
+    <Content Include="ExpectedResults\HtmlReceiptOneDuraAce.txt" />
+    <Content Include="ExpectedResults\HtmlReceiptOneElite.txt" />
+    <Content Include="ExpectedResults\JsonReceiptMultipleOrders.txt" />
+    <Content Include="ExpectedResults\JsonReceiptOneDefy.txt" />
+    <Content Include="ExpectedResults\JsonReceiptOneDuraAce.txt" />
+    <Content Include="ExpectedResults\JsonReceiptOneElite.txt" />
+    <Content Include="ExpectedResults\ReceiptOneDefy.txt" />
+    <Content Include="ExpectedResults\ReceiptMultipleOrders.txt" />
+    <Content Include="ExpectedResults\ReceiptOneDuraAce.txt" />
+    <Content Include="ExpectedResults\ReceiptOneElite.txt" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace BikeDistributor
 {
     // https://github.com/Antaris/RazorEngine
     public abstract class OrderRendererBase
     {
-        public enum RenderFormat { Text, Html }
+        public enum RenderFormat { Text, Html, JSON }
 
         public OrderRendererBase(Order order)
         {
@@ -25,6 +26,23 @@ namespace BikeDistributor
         public List<Order> Orders { get; private set; } = new List<Order>();
         public string NewLine { get; set; } = Environment.NewLine;
     }
+
+    public class OrderRendererJson : OrderRendererBase
+    {
+        public OrderRendererJson(Order order) : base(order)
+        { }
+
+        public OrderRendererJson(Order[] orders) : base(orders)
+        { }
+
+        public override RenderFormat GetFormat() => RenderFormat.JSON;
+
+        public override dynamic Render()
+        {
+            return JsonConvert.SerializeObject(Orders, Formatting.Indented);
+        }
+    }
+
 
     public class OrderRendererText : OrderRendererBase
     {
@@ -45,8 +63,8 @@ namespace BikeDistributor
                 if (!isFirst)
                 {
                     result.Append("\f"); // form feed to separate pages
-                    isFirst = false;
                 }
+                isFirst = false;
 
                 result.AppendFormat("Order Receipt for {0}{1}", o.Company, NewLine);
                 foreach (var l in o.Lines)
@@ -55,7 +73,7 @@ namespace BikeDistributor
                 }
                 result.AppendFormat("Sub-Total: {0:C}{1}", o.SubtotalOrderAmount, NewLine);
                 result.AppendFormat("Tax: {0:C}{1}", o.TaxAmount, NewLine);
-                result.AppendFormat("Total: {0:C}", o.TotalOrderAmount);
+                result.AppendFormat("Total: {0:C}{1}", o.TotalOrderAmount, NewLine);
             }
             return result.ToString();
         }
@@ -75,28 +93,28 @@ namespace BikeDistributor
         {
             bool isFirst = true;
             var result = new StringBuilder();
-            result.Append("<html><body>");
+            result.Append("<html><body>\n");
 
             foreach (Order o in Orders)
             {
                 if (!isFirst)
                 {
-                    result.Append("<hr>"); // form feed to separate pages
-                    isFirst = false;
+                    result.AppendLine("<hr>"); // form feed to separate pages
                 }
+                isFirst = false;
 
-                result.AppendFormat("<h1>Order Receipt for {0}</h1>", o.Company);
+                result.AppendFormat("<h1>Order Receipt for {0}</h1>\n", o.Company);
 
-                result.Append("<ul>");
+                result.AppendLine("<ul>");
                 foreach (var l in o.Lines)
                 {
-                    result.Append(string.Format("<li>{0} x {1} {2} = {3:C}</li>", l.Quantity, l.Bike.Brand, l.Bike.Model, l.TotalAmount));
+                    result.AppendFormat("\t<li>{0} x {1} {2} = {3:C}</li>\n", l.Quantity, l.Bike.Brand, l.Bike.Model, l.TotalAmount);
                 }
-                result.Append("</ul>");
+                result.AppendLine("</ul>");
 
-                result.AppendFormat("<h3>Sub-Total: {0:C}</h3>", o.SubtotalOrderAmount);
-                result.AppendFormat("<h3>Tax: {0:C}</h3>", o.TaxAmount);
-                result.AppendFormat("<h2>Total: {0:C}</h2>", o.TotalOrderAmount);
+                result.AppendFormat("<h3>Sub-Total: {0:C}</h3>\n", o.SubtotalOrderAmount);
+                result.AppendFormat("<h3>Tax: {0:C}</h3>\n", o.TaxAmount);
+                result.AppendFormat("<h2>Total: {0:C}</h2>\n", o.TotalOrderAmount);
             }
             result.Append("</body></html>");
             return result.ToString();

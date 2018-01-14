@@ -1,0 +1,51 @@
+﻿Order Receipt for Test JS Shop
+	1 x Giant Defy 1 = $1,000.00
+	19 x Giant Defy 1 = $19,000.00
+	20 x Giant Defy 1 = $16,000.00
+	21 x Giant Defy 1 = $16,800.00
+	1 x Specialized Venge Elite = $2,000.00
+	9 x Specialized Venge Elite = $18,000.00
+	10 x Specialized Venge Elite = $14,000.00
+	11 x Specialized Venge Elite = $15,400.00
+	1 x Specialized S-Works Venge Dura-Ace = $5,000.00
+	4 x Specialized S-Works Venge Dura-Ace = $20,000.00
+	5 x Specialized S-Works Venge Dura-Ace = $15,000.00
+	6 x Specialized S-Works Venge Dura-Ace = $18,000.00
+	1 x Specialized Flat S-Works Venge Dura-Ace = $5,000.00
+	6 x Specialized Flat S-Works Venge Dura-Ace = $30,000.00
+	7 x Specialized Flat S-Works Venge Dura-Ace = $33,358.08
+	8 x Specialized Flat S-Works Venge Dura-Ace = $38,123.52
+Sub-Total: $266,681.60
+Tax: $19,334.42
+Total: $286,016.02
+Order Receipt for Anywhere Bike Shop
+	1 x Giant Defy 1 = $1,000.00
+	19 x Giant Defy 1 = $19,000.00
+	20 x Giant Defy 1 = $18,000.00
+	21 x Giant Defy 1 = $18,900.00
+	100 x Giant Defy 1 Zero = $100,000.00
+	1 x Specialized Venge Elite = $2,000.00
+	9 x Specialized Venge Elite = $18,000.00
+	10 x Specialized Venge Elite = $16,000.00
+	11 x Specialized Venge Elite = $17,600.00
+	1 x Specialized Flat S-Works Venge Dura-Ace = $4,766.00
+	1 x Specialized S-Works Venge Dura-Ace = $5,000.00
+	4 x Specialized S-Works Venge Dura-Ace = $20,000.00
+	5 x Specialized S-Works Venge Dura-Ace = $20,000.00
+	6 x Specialized S-Works Venge Dura-Ace = $24,000.00
+Sub-Total: $284,266.00
+Tax: $20,609.28
+Total: $304,875.28
+Order Receipt for Multiple Discounts Shop
+	1 x MD Multiple Discounts = $5,000.00
+	2 x MD Multiple Discounts = $9,532.00
+	3 x MD Multiple Discounts = $14,298.00
+	4 x MD Multiple Discounts = $18,617.32
+	5 x MD Multiple Discounts = $23,271.65
+	6 x MD Multiple Discounts = $24,000.00
+	7 x MD Multiple Discounts = $28,000.00
+	8 x MD Multiple Discounts = $28,000.00
+	9 x MD Multiple Discounts = $31,500.00
+Sub-Total: $182,218.97
+Tax: $13,210.88
+Total: $195,429.85

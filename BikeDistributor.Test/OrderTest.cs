@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.IO;
 
 namespace BikeDistributor.Test
 {
@@ -10,6 +11,29 @@ namespace BikeDistributor.Test
         public const int TwoThousand = 2000;
         public const int FiveThousand = 5000;
 
+        // Return per unit discount amount in dollars
+        private static string JS_Rule =
+@"
+var res = 0;
+switch(Bike.Model)
+{
+    case ""Defy 1"":
+        if (Quantity >= 20) res = 0.2 * Bike.Price;
+        break;
+    case ""Venge Elite"":
+        if (Quantity >= 10) res = 0.3 * Bike.Price;
+        break;
+    case ""S-Works Venge Dura-Ace"":
+        if (Quantity >= 5) res = 0.4 * Bike.Price;
+        break;
+    case ""Flat S-Works Venge Dura-Ace"":
+        if (Quantity >= 7) res = 234.56;
+        break;
+}
+res;
+";
+
+        private static BikeDiscounts JSDiscount = new BikeDiscounts(new(int, DiscountInfo)[] { (-1, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Expression, null, JS_Rule)) });
         private static BikeDiscounts DiscountOneThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 20, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.1m, null) ) } );
         private static BikeDiscounts DiscountTwoThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 10, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.2m, null)) } );
         private static BikeDiscounts DiscountFiveThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 5, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.2m, null)) });
@@ -20,29 +44,6 @@ namespace BikeDistributor.Test
             ( 6, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.2m, null)),
             ( 8, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.3m, null))
         });
-
-        private static string JS_Rule =
-@"
-var res = 0;
-switch(Bike.Model)
-{
-    case ""Defy 1"":
-        if (Quantity >= 20) res = 0.2;
-        break;
-    case ""Venge Elite"":
-        if (Quantity >= 10) res = 0.3;
-        break;
-    case ""S-Works Venge Dura-Ace"":
-        if (Quantity >= 5) res = 0.4;
-        break;
-    case ""Flat S-Works Venge Dura-Ace"":
-        if (Quantity >= 7) res = 234.56;
-        break;
-}
-res;
-";
-
-        private static BikeDiscounts JSDiscount = new BikeDiscounts(new(int, DiscountInfo)[] { (-1, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Expression, null, JS_Rule)) });
 
         private readonly static Bike Defy = new Bike("Giant", "Defy 1", OneThousand, DiscountOneThousand);
         private readonly static Bike Defy0Disc = new Bike("Giant", "Defy 1 Zero", OneThousand);
@@ -58,13 +59,113 @@ res;
         private readonly static Bike MultiDiscount = new Bike("MD", "Multiple Discounts", FiveThousand, MultipleDiscount);
 
 
-        //*********************************************
-        //*********************************************
-        // Test with 100 for quantity and multiple invoice lines
-        //*********************************************
-        //*********************************************
         [TestMethod]
-        public void ReceiptManyAndMultipleBikes()
+        public void ReceiptMultipleOrders()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\ReceiptMultipleOrders.txt");
+            Assert.AreEqual(s, new OrderRendererText(CreateOrdersMultipleReceipts().ToArray()).Render());
+        }
+
+        [TestMethod]
+        public void ReceiptOneDefy()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\ReceiptOneDefy.txt");
+            Assert.AreEqual(s, new OrderRendererText(CreateOrdersOneDefy()).Render());
+        }
+
+        [TestMethod]
+        public void ReceiptOneElite()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\ReceiptOneElite.txt");
+            Assert.AreEqual(s, new OrderRendererText(CreateOrdersOneElite()).Render());
+        }
+
+        [TestMethod]
+        public void ReceiptOneDuraAce()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\ReceiptOneDuraAce.txt");
+            Assert.AreEqual(s, new OrderRendererText(CreateOrdersOneDuraAce()).Render());
+        }
+
+        [TestMethod]
+        public void HtmlReceiptMultipleOrders()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\HtmlReceiptMultipleOrders.txt");
+            Assert.AreEqual(s, new OrderRendererHtml(CreateOrdersMultipleReceipts().ToArray()).Render());
+        }
+
+        [TestMethod]
+        public void HtmlReceiptOneDefy()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\HtmlReceiptOneDefy.txt");
+            Assert.AreEqual(s, new OrderRendererHtml(CreateOrdersOneDefy()).Render());
+        }
+
+        [TestMethod]
+        public void HtmlReceiptOneElite()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\HtmlReceiptOneElite.txt");
+            Assert.AreEqual(s, new OrderRendererHtml(CreateOrdersOneElite()).Render());
+        }
+
+        [TestMethod]
+        public void HtmlReceiptOneDuraAce()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\HtmlReceiptOneDuraAce.txt");
+            Assert.AreEqual(s, new OrderRendererHtml(CreateOrdersOneDuraAce()).Render());
+        }
+
+
+        [TestMethod]
+        public void JsonReceiptMultipleOrders()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\JsonReceiptMultipleOrders.txt");
+            Assert.AreEqual(s, new OrderRendererJson(CreateOrdersMultipleReceipts().ToArray()).Render());
+        }
+
+        [TestMethod]
+        public void JsonReceiptOneDefy()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\JsonReceiptOneDefy.txt");
+            Assert.AreEqual(s, new OrderRendererJson(CreateOrdersOneDefy()).Render());
+        }
+
+        [TestMethod]
+        public void JsonReceiptOneElite()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\JsonReceiptOneElite.txt");
+            Assert.AreEqual(s, new OrderRendererJson(CreateOrdersOneElite()).Render());
+        }
+
+        [TestMethod]
+        public void JsonReceiptOneDuraAce()
+        {
+            var s = File.ReadAllText(@"..\..\ExpectedResults\JsonReceiptOneDuraAce.txt");
+            Assert.AreEqual(s, new OrderRendererJson(CreateOrdersOneDuraAce()).Render());
+        }
+
+        private Order CreateOrdersOneDefy()
+        {
+            var order = new Order("Anywhere Bike Shop");
+            order.AddLine(new Line(Defy, 1));
+            return order;
+        }
+
+        private Order CreateOrdersOneElite()
+        {
+            var order = new Order("Anywhere Bike Shop");
+            order.AddLine(new Line(Elite, 1));
+            return order;
+        }
+
+        private Order CreateOrdersOneDuraAce()
+        {
+            var order = new Order("Anywhere Bike Shop");
+            order.AddLine(new Line(DuraAce, 1));
+            return order;
+        }
+
+        private List<Order> CreateOrdersMultipleReceipts()
         {
             List<Order> orders = new List<Order>();
 
@@ -116,86 +217,9 @@ res;
             o.AddLine(new Line(MultiDiscount, 9));
             orders.Add(o);
 
-            Assert.AreEqual(ResultStatementManyAndMultipleBikes, new OrderRendererText(orders.ToArray()).Render());
+            return orders;
         }
 
-        private const string ResultStatementManyAndMultipleBikes = @"Order Receipt for Anywhere Bike Shop
-	1 x Giant Defy 1 = $1,000.00
-Sub-Total: $1,000.00
-Tax: $72.50
-Total: $1,072.50";
-
-        [TestMethod]
-        public void ReceiptOneDefy()
-        {
-            var order = new Order("Anywhere Bike Shop");
-            order.AddLine(new Line(Defy, 1));
-            Assert.AreEqual(ResultStatementOneDefy, new OrderRendererText(order).Render());
-        }
-
-        private const string ResultStatementOneDefy = @"Order Receipt for Anywhere Bike Shop
-	1 x Giant Defy 1 = $1,000.00
-Sub-Total: $1,000.00
-Tax: $72.50
-Total: $1,072.50";
-
-        [TestMethod]
-        public void ReceiptOneElite()
-        {
-            var order = new Order("Anywhere Bike Shop");
-            order.AddLine(new Line(Elite, 1));
-            Assert.AreEqual(ResultStatementOneElite, new OrderRendererText(order).Render());
-        }
-
-        private const string ResultStatementOneElite = @"Order Receipt for Anywhere Bike Shop
-	1 x Specialized Venge Elite = $2,000.00
-Sub-Total: $2,000.00
-Tax: $145.00
-Total: $2,145.00";
-
-        [TestMethod]
-        public void ReceiptOneDuraAce()
-        {
-            var order = new Order("Anywhere Bike Shop");
-            order.AddLine(new Line(DuraAce, 1));
-            Assert.AreEqual(ResultStatementOneDuraAce, new OrderRendererText(order).Render());
-        }
-
-        private const string ResultStatementOneDuraAce = @"Order Receipt for Anywhere Bike Shop
-	1 x Specialized S-Works Venge Dura-Ace = $5,000.00
-Sub-Total: $5,000.00
-Tax: $362.50
-Total: $5,362.50";
-
-        [TestMethod]
-        public void HtmlReceiptOneDefy()
-        {
-            var order = new Order("Anywhere Bike Shop");
-            order.AddLine(new Line(Defy, 1));
-            Assert.AreEqual(HtmlResultStatementOneDefy, new OrderRendererHtml(order).Render());
-        }
-
-        private const string HtmlResultStatementOneDefy = @"<html><body><h1>Order Receipt for Anywhere Bike Shop</h1><ul><li>1 x Giant Defy 1 = $1,000.00</li></ul><h3>Sub-Total: $1,000.00</h3><h3>Tax: $72.50</h3><h2>Total: $1,072.50</h2></body></html>";
-
-        [TestMethod]
-        public void HtmlReceiptOneElite()
-        {
-            var order = new Order("Anywhere Bike Shop");
-            order.AddLine(new Line(Elite, 1));
-            Assert.AreEqual(HtmlResultStatementOneElite, new OrderRendererHtml(order).Render());
-        }
-
-        private const string HtmlResultStatementOneElite = @"<html><body><h1>Order Receipt for Anywhere Bike Shop</h1><ul><li>1 x Specialized Venge Elite = $2,000.00</li></ul><h3>Sub-Total: $2,000.00</h3><h3>Tax: $145.00</h3><h2>Total: $2,145.00</h2></body></html>";
-
-        [TestMethod]
-        public void HtmlReceiptOneDuraAce()
-        {
-            var order = new Order("Anywhere Bike Shop");
-            order.AddLine(new Line(DuraAce, 1));
-            Assert.AreEqual(HtmlResultStatementOneDuraAce, new OrderRendererHtml(order).Render());
-        }
-
-        private const string HtmlResultStatementOneDuraAce = @"<html><body><h1>Order Receipt for Anywhere Bike Shop</h1><ul><li>1 x Specialized S-Works Venge Dura-Ace = $5,000.00</li></ul><h3>Sub-Total: $5,000.00</h3><h3>Tax: $362.50</h3><h2>Total: $5,362.50</h2></body></html>";
 
     }
 }

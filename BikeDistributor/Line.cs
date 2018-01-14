@@ -25,7 +25,7 @@ namespace BikeDistributor
 
                 case DiscountInfo.DiscountTypeFlag.FlatDiscount:
                     UnitDiscountAmount = Math.Round(di.Discount.Value, 2);
-                    TotalDiscountAmount = Math.Round(di.Discount.Value * quantity, 2);
+                    TotalDiscountAmount = Math.Round(UnitDiscountAmount * quantity, 2);
                     if (TotalDiscountAmount == 0m)
                     {
                         UnitDiscountPercentage = 0m;
@@ -40,7 +40,7 @@ namespace BikeDistributor
 
                 case DiscountInfo.DiscountTypeFlag.Percentage:
                     UnitDiscountPercentage = Math.Round(di.Discount.Value, 2);
-                    TotalDiscountPercentage = Math.Round(di.Discount.Value, 2);
+                    TotalDiscountPercentage = UnitDiscountPercentage;
                     UnitDiscountAmount = Math.Round(Bike.Price * UnitDiscountPercentage, 2);
                     TotalDiscountAmount = Math.Round(TotalPrice * TotalDiscountPercentage, 2);
                     break;
@@ -58,7 +58,7 @@ namespace BikeDistributor
                     UnitDiscountPercentage = Math.Round(UnitDiscountAmount / Bike.Price, 2);
 
                     TotalDiscountAmount = Math.Round(Quantity * UnitDiscountAmount, 2);
-                    TotalDiscountPercentage = Math.Round(TotalDiscountAmount / TotalPrice, 2);
+                    TotalDiscountPercentage = UnitDiscountPercentage;
                     break;
             }
 

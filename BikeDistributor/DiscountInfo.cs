@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BikeDistributor
 {
     public class DiscountInfo
     {
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum DiscountTypeFlag { Percentage, FlatDiscount, Expression, None }
 
         public DiscountInfo(DiscountTypeFlag discountType, decimal? discount, string expression)

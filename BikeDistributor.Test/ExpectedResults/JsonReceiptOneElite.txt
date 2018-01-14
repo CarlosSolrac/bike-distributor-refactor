@@ -1,0 +1,34 @@
+﻿[
+  {
+    "Lines": [
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "10": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 2000.0,
+        "TotalAmount": 2000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      }
+    ],
+    "Company": "Anywhere Bike Shop",
+    "TaxRate": 0.0725,
+    "SubtotalOrderAmount": 2000.0,
+    "TaxAmount": 145.00,
+    "TotalOrderAmount": 2145.00
+  }
+]

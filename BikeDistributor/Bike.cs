@@ -26,7 +26,7 @@ namespace BikeDistributor
             if (DiscountObj is null) 
                 return new DiscountInfo(DiscountInfo.DiscountTypeFlag.None, null, null);
             
-            return DiscountObj.Discount(quantity);
+            return DiscountObj.GetDiscount(quantity);
         }
 
         public string Brand { get; private set; }

@@ -1,0 +1,1053 @@
+﻿[
+  {
+    "Lines": [
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 1000.0,
+        "TotalAmount": 1000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 19,
+        "TotalPrice": 19000.0,
+        "TotalAmount": 19000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 20,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 16000.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 200.0,
+        "TotalDiscountAmount": 4000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 21,
+        "TotalPrice": 21000.0,
+        "TotalAmount": 16800.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 200.0,
+        "TotalDiscountAmount": 4200.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 2000.0,
+        "TotalAmount": 2000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 9,
+        "TotalPrice": 18000.0,
+        "TotalAmount": 18000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 10,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 14000.0,
+        "UnitDiscountPercentage": 0.3,
+        "TotalDiscountPercentage": 0.3,
+        "UnitDiscountAmount": 600.0,
+        "TotalDiscountAmount": 6000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 11,
+        "TotalPrice": 22000.0,
+        "TotalAmount": 15400.0,
+        "UnitDiscountPercentage": 0.3,
+        "TotalDiscountPercentage": 0.3,
+        "UnitDiscountAmount": 600.0,
+        "TotalDiscountAmount": 6600.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 5000.0,
+        "TotalAmount": 5000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 4,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 20000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 5,
+        "TotalPrice": 25000.0,
+        "TotalAmount": 15000.0,
+        "UnitDiscountPercentage": 0.4,
+        "TotalDiscountPercentage": 0.4,
+        "UnitDiscountAmount": 2000.0,
+        "TotalDiscountAmount": 10000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 6,
+        "TotalPrice": 30000.0,
+        "TotalAmount": 18000.0,
+        "UnitDiscountPercentage": 0.4,
+        "TotalDiscountPercentage": 0.4,
+        "UnitDiscountAmount": 2000.0,
+        "TotalDiscountAmount": 12000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Flat S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 5000.0,
+        "TotalAmount": 5000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Flat S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 6,
+        "TotalPrice": 30000.0,
+        "TotalAmount": 30000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Flat S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 7,
+        "TotalPrice": 35000.0,
+        "TotalAmount": 33358.08,
+        "UnitDiscountPercentage": 0.05,
+        "TotalDiscountPercentage": 0.05,
+        "UnitDiscountAmount": 234.56,
+        "TotalDiscountAmount": 1641.92
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Flat S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "-1": {
+                "DiscountType": "Expression",
+                "Discount": null,
+                "Expression": "var res = 0;\r\nswitch(Bike.Model)\r\n{\r\n    case \"Defy 1\":\r\n        if (Quantity >= 20) res = 0.2 * Bike.Price;\r\n        break;\r\n    case \"Venge Elite\":\r\n        if (Quantity >= 10) res = 0.3 * Bike.Price;\r\n        break;\r\n    case \"S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 5) res = 0.4 * Bike.Price;\r\n        break;\r\n    case \"Flat S-Works Venge Dura-Ace\":\r\n        if (Quantity >= 7) res = 234.56;\r\n        break;\r\n}\r\nres;"
+              }
+            }
+          }
+        },
+        "Quantity": 8,
+        "TotalPrice": 40000.0,
+        "TotalAmount": 38123.52,
+        "UnitDiscountPercentage": 0.05,
+        "TotalDiscountPercentage": 0.05,
+        "UnitDiscountAmount": 234.56,
+        "TotalDiscountAmount": 1876.48
+      }
+    ],
+    "Company": "Test JS Shop",
+    "TaxRate": 0.0725,
+    "SubtotalOrderAmount": 266681.60,
+    "TaxAmount": 19334.42,
+    "TotalOrderAmount": 286016.02
+  },
+  {
+    "Lines": [
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "20": {
+                "DiscountType": "Percentage",
+                "Discount": 0.1,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 1000.0,
+        "TotalAmount": 1000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "20": {
+                "DiscountType": "Percentage",
+                "Discount": 0.1,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 19,
+        "TotalPrice": 19000.0,
+        "TotalAmount": 19000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "20": {
+                "DiscountType": "Percentage",
+                "Discount": 0.1,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 20,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 18000.0,
+        "UnitDiscountPercentage": 0.1,
+        "TotalDiscountPercentage": 0.1,
+        "UnitDiscountAmount": 100.0,
+        "TotalDiscountAmount": 2000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1",
+          "Price": 1000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "20": {
+                "DiscountType": "Percentage",
+                "Discount": 0.1,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 21,
+        "TotalPrice": 21000.0,
+        "TotalAmount": 18900.0,
+        "UnitDiscountPercentage": 0.1,
+        "TotalDiscountPercentage": 0.1,
+        "UnitDiscountAmount": 100.0,
+        "TotalDiscountAmount": 2100.0
+      },
+      {
+        "Bike": {
+          "Brand": "Giant",
+          "Model": "Defy 1 Zero",
+          "Price": 1000.0,
+          "DiscountObj": null
+        },
+        "Quantity": 100,
+        "TotalPrice": 100000.0,
+        "TotalAmount": 100000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "10": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 2000.0,
+        "TotalAmount": 2000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "10": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 9,
+        "TotalPrice": 18000.0,
+        "TotalAmount": 18000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "10": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 10,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 16000.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 400.0,
+        "TotalDiscountAmount": 4000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Venge Elite",
+          "Price": 2000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "10": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 11,
+        "TotalPrice": 22000.0,
+        "TotalAmount": 17600.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 400.0,
+        "TotalDiscountAmount": 4400.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "Flat S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "1": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 5000.0,
+        "TotalAmount": 4766.00,
+        "UnitDiscountPercentage": 0.05,
+        "TotalDiscountPercentage": 0.05,
+        "UnitDiscountAmount": 234.00,
+        "TotalDiscountAmount": 234.00
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "5": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 5000.0,
+        "TotalAmount": 5000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "5": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 4,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 20000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "5": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 5,
+        "TotalPrice": 25000.0,
+        "TotalAmount": 20000.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 1000.0,
+        "TotalDiscountAmount": 5000.0
+      },
+      {
+        "Bike": {
+          "Brand": "Specialized",
+          "Model": "S-Works Venge Dura-Ace",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "5": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 6,
+        "TotalPrice": 30000.0,
+        "TotalAmount": 24000.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 1000.0,
+        "TotalDiscountAmount": 6000.0
+      }
+    ],
+    "Company": "Anywhere Bike Shop",
+    "TaxRate": 0.0725,
+    "SubtotalOrderAmount": 284266.00,
+    "TaxAmount": 20609.28,
+    "TotalOrderAmount": 304875.28
+  },
+  {
+    "Lines": [
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 1,
+        "TotalPrice": 5000.0,
+        "TotalAmount": 5000.0,
+        "UnitDiscountPercentage": 0.0,
+        "TotalDiscountPercentage": 0.0,
+        "UnitDiscountAmount": 0.0,
+        "TotalDiscountAmount": 0.0
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 2,
+        "TotalPrice": 10000.0,
+        "TotalAmount": 9532.00,
+        "UnitDiscountPercentage": 0.05,
+        "TotalDiscountPercentage": 0.05,
+        "UnitDiscountAmount": 234.00,
+        "TotalDiscountAmount": 468.00
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 3,
+        "TotalPrice": 15000.0,
+        "TotalAmount": 14298.00,
+        "UnitDiscountPercentage": 0.05,
+        "TotalDiscountPercentage": 0.05,
+        "UnitDiscountAmount": 234.00,
+        "TotalDiscountAmount": 702.00
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 4,
+        "TotalPrice": 20000.0,
+        "TotalAmount": 18617.32,
+        "UnitDiscountPercentage": 0.07,
+        "TotalDiscountPercentage": 0.07,
+        "UnitDiscountAmount": 345.67,
+        "TotalDiscountAmount": 1382.68
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 5,
+        "TotalPrice": 25000.0,
+        "TotalAmount": 23271.65,
+        "UnitDiscountPercentage": 0.07,
+        "TotalDiscountPercentage": 0.07,
+        "UnitDiscountAmount": 345.67,
+        "TotalDiscountAmount": 1728.35
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 6,
+        "TotalPrice": 30000.0,
+        "TotalAmount": 24000.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 1000.0,
+        "TotalDiscountAmount": 6000.0
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 7,
+        "TotalPrice": 35000.0,
+        "TotalAmount": 28000.0,
+        "UnitDiscountPercentage": 0.2,
+        "TotalDiscountPercentage": 0.2,
+        "UnitDiscountAmount": 1000.0,
+        "TotalDiscountAmount": 7000.0
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 8,
+        "TotalPrice": 40000.0,
+        "TotalAmount": 28000.0,
+        "UnitDiscountPercentage": 0.3,
+        "TotalDiscountPercentage": 0.3,
+        "UnitDiscountAmount": 1500.0,
+        "TotalDiscountAmount": 12000.0
+      },
+      {
+        "Bike": {
+          "Brand": "MD",
+          "Model": "Multiple Discounts",
+          "Price": 5000.0,
+          "DiscountObj": {
+            "Discounts": {
+              "2": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 234.00,
+                "Expression": null
+              },
+              "4": {
+                "DiscountType": "FlatDiscount",
+                "Discount": 345.67,
+                "Expression": null
+              },
+              "6": {
+                "DiscountType": "Percentage",
+                "Discount": 0.2,
+                "Expression": null
+              },
+              "8": {
+                "DiscountType": "Percentage",
+                "Discount": 0.3,
+                "Expression": null
+              }
+            }
+          }
+        },
+        "Quantity": 9,
+        "TotalPrice": 45000.0,
+        "TotalAmount": 31500.0,
+        "UnitDiscountPercentage": 0.3,
+        "TotalDiscountPercentage": 0.3,
+        "UnitDiscountAmount": 1500.0,
+        "TotalDiscountAmount": 13500.0
+      }
+    ],
+    "Company": "Multiple Discounts Shop",
+    "TaxRate": 0.0725,
+    "SubtotalOrderAmount": 182218.97,
+    "TaxAmount": 13210.88,
+    "TotalOrderAmount": 195429.85
+  }
+]

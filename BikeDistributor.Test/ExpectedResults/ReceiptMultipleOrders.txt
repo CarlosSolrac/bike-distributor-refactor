@@ -18,7 +18,10 @@
 Sub-Total: $266,681.60
 Tax: $19,334.42
 Total: $286,016.02
-Order Receipt for Anywhere Bike Shop
+
+---------------------------------------------------
+
+Order Receipt for Anywhere Bike Shop
 	1 x Giant Defy 1 = $1,000.00
 	19 x Giant Defy 1 = $19,000.00
 	20 x Giant Defy 1 = $18,000.00
@@ -36,7 +39,10 @@ Total: $286,016.02
 Sub-Total: $284,266.00
 Tax: $20,609.28
 Total: $304,875.28
-Order Receipt for Multiple Discounts Shop
+
+---------------------------------------------------
+
+Order Receipt for Multiple Discounts Shop
 	1 x MD Multiple Discounts = $5,000.00
 	2 x MD Multiple Discounts = $9,532.00
 	3 x MD Multiple Discounts = $14,298.00

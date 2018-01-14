@@ -62,7 +62,7 @@ namespace BikeDistributor
             {
                 if (!isFirst)
                 {
-                    result.Append("\f"); // form feed to separate pages
+                    result.AppendFormat("{0}---------------------------------------------------{0}{0}", NewLine);
                 }
                 isFirst = false;
 

@@ -93,28 +93,28 @@ namespace BikeDistributor
         {
             bool isFirst = true;
             var result = new StringBuilder();
-            result.Append("<html><body>\n");
+            result.AppendFormat("<html><body>{0}", NewLine);
 
             foreach (Order o in Orders)
             {
                 if (!isFirst)
                 {
-                    result.AppendLine("<hr>"); // form feed to separate pages
+                    result.AppendFormat("<hr>{0}", NewLine); // form feed to separate pages
                 }
                 isFirst = false;
 
-                result.AppendFormat("<h1>Order Receipt for {0}</h1>\n", o.Company);
+                result.AppendFormat("<h1>Order Receipt for {0}</h1>{1}", o.Company, NewLine);
 
-                result.AppendLine("<ul>");
+                result.AppendFormat("<ul>{0}", NewLine);
                 foreach (var l in o.Lines)
                 {
-                    result.AppendFormat("\t<li>{0} x {1} {2} = {3:C}</li>\n", l.Quantity, l.Bike.Brand, l.Bike.Model, l.TotalAmount);
+                    result.AppendFormat("\t<li>{0} x {1} {2} = {3:C}</li>{4}", l.Quantity, l.Bike.Brand, l.Bike.Model, l.TotalAmount, NewLine);
                 }
-                result.AppendLine("</ul>");
+                result.AppendFormat("</ul>{0}", NewLine);
 
-                result.AppendFormat("<h3>Sub-Total: {0:C}</h3>\n", o.SubtotalOrderAmount);
-                result.AppendFormat("<h3>Tax: {0:C}</h3>\n", o.TaxAmount);
-                result.AppendFormat("<h2>Total: {0:C}</h2>\n", o.TotalOrderAmount);
+                result.AppendFormat("<h3>Sub-Total: {0:C}</h3>{1}", o.SubtotalOrderAmount, NewLine);
+                result.AppendFormat("<h3>Tax: {0:C}</h3>{1}", o.TaxAmount, NewLine);
+                result.AppendFormat("<h2>Total: {0:C}</h2>{1}", o.TotalOrderAmount, NewLine);
             }
             result.Append("</body></html>");
             return result.ToString();

@@ -4,6 +4,11 @@ using System.IO;
 
 namespace BikeDistributor.Test
 {
+    /// Design tradeoffs: I did not implement the testing of the exceptions and parameter validation.
+    /// 
+    /// Put the expected results in files, to make it easier to modify the unit tests.
+    /// 
+    /// Put the creation of the Order objects in there one methods to make it easier reuse the code.
     [TestClass]
     public class OrderTest
     {
@@ -12,6 +17,8 @@ namespace BikeDistributor.Test
         public const int FiveThousand = 5000;
 
         // Return per unit discount amount in dollars
+        //
+        // The javascript is slower to execute but more flexible.
         private static string JS_Rule =
 @"
 var res = 0;

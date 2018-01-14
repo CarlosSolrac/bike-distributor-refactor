@@ -5,7 +5,29 @@ using Newtonsoft.Json;
 
 namespace BikeDistributor
 {
-    // https://github.com/Antaris/RazorEngine
+    // 
+    /// <summary>
+    /// Order renderer base.
+    /// Separate the rendering from the Order class. This allows rendering to be modified indepently from the other logic.
+    /// The rendering code could be implemented in a DLL and updated independantly of the rest of the code.
+    /// </summary>
+    /// 
+    /// Design tradeoffs: Abstract base class vs an interface
+    ///     Interfaces are most useful when simulating multiple inheritance. At the current moment, there
+    ///     is no need to inherit multiple interfaces so I went with an abstract base class. It could have bee done
+    ///     with a single static class, but I wanted to write a more extensible design.
+    /// 
+    /// Design tradeoffs: I simplified the code. But what this really needs is a template driven rendering engine.
+    ///     A possible choice would be SSRS, Pentaho, etc
+    ///     For a smaller scale renderer, this project code be used to create Razor HTML pages and rendered to HTML. Then from HTML
+    ///     to any other necessary format. https://github.com/Antaris/RazorEngine
+    /// 
+    /// Added JSON rendering to simplify debugging and testing.
+    /// 
+    /// NOTE: Needed to specify the NewLine to keep it portable across OSX and Windows.
+    /// 
+    /// Not documenting the class completely due to it's simplicity and in a real world example should be discarded and replace with a 
+    ///     more complete solution.
     public abstract class OrderRendererBase
     {
         public enum RenderFormat { Text, Html, JSON }
@@ -21,10 +43,10 @@ namespace BikeDistributor
         }
 
         public abstract RenderFormat GetFormat();
-        public abstract dynamic Render();
+        public abstract dynamic Render(); // Derived classes could possibly return various types of data: strings, stream objects, PDF, etc
 
         public List<Order> Orders { get; private set; } = new List<Order>();
-        public string NewLine { get; set; } = Environment.NewLine;
+        public string NewLine { get; set; } = Environment.NewLine; // Store this and make it changeable across rendering.
     }
 
     public class OrderRendererJson : OrderRendererBase

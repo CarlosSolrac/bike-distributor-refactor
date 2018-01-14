@@ -6,6 +6,12 @@ using System;
 
 namespace BikeDistributor
 {
+    /// <summary>
+    /// Holds the properties of a bike.
+    /// </summary>
+    /// Design: Separate the Bike properties and discount information.
+    /// 
+    /// Skipping documenting this class since it was provided as part of the initial code
     public class Bike
     {
         public Bike(string brand, string model, int price)
@@ -21,10 +27,21 @@ namespace BikeDistributor
             DiscountObj = discounts;
         }
 
+        /// <summary>
+        /// Gets the discount corresponding to the quantity sold
+        /// </summary>
+        /// <returns>The discount.</returns>
+        /// <param name="quantity">Quantity must be greater than zero</param>
         public DiscountInfo GetDiscount(int quantity)
         {
+            Debug.Assert(quantity > 0);
+
+            if (quantity <= 0)
+                throw new ArgumentException("Must be greater than zero", nameof(quantity));
+
+            // If no discount object just return zero discount
             if (DiscountObj is null) 
-                return new DiscountInfo(DiscountInfo.DiscountTypeFlag.None, null, null);
+                return DiscountInfo.CreateNoDiscountObj();
             
             return DiscountObj.GetDiscount(quantity);
         }

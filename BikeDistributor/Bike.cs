@@ -41,7 +41,7 @@ namespace BikeDistributor
 
             // If no discount object just return zero discount
             if (DiscountObj is null) 
-                return DiscountInfo.CreateNoDiscountObj();
+                return DiscountInfo.CreateDiscountZeroAmount();
             
             return DiscountObj.GetDiscount(quantity);
         }

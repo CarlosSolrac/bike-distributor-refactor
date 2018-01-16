@@ -25,7 +25,7 @@ namespace BikeDistributor
         ///     < description > 0.2 => 20% Valid values: (0,1] </ description >
         /// </ item >
         /// < item >
-        ///     < term > FlatDiscount </ term >
+        ///     < term > FixedAmount </ term >
         ///     < description > Per unit dollar amount discount </ description >
         /// </ item >
         /// < item >
@@ -38,8 +38,7 @@ namespace BikeDistributor
         /// </ item >
         /// </ list >      
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DiscountTypeFlag { Percentage, FlatDiscount, Expression, None }
-
+        public enum DiscountTypeFlag { Percentage, FixedAmount, Expression, None }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:BikeDistributor.DiscountInfo"/> class.
@@ -52,7 +51,7 @@ namespace BikeDistributor
             // Assist with debugging
             Debug.Assert(
                 (discountType == DiscountTypeFlag.None && discount == null && expression == null) ||
-                (discountType == DiscountTypeFlag.FlatDiscount && discount != null && discount.HasValue && 0 < discount) ||
+                (discountType == DiscountTypeFlag.FixedAmount && discount != null && discount.HasValue && 0 < discount) ||
                 (discountType == DiscountTypeFlag.Percentage && discount != null && discount.HasValue && 0 < discount && discount <= 1) ||
                 (discountType == DiscountTypeFlag.Expression && discount == null && !string.IsNullOrEmpty(expression) && !string.IsNullOrWhiteSpace(expression))
             );
@@ -69,7 +68,7 @@ namespace BikeDistributor
                     break;
 
                 case DiscountTypeFlag.Percentage:
-                case DiscountTypeFlag.FlatDiscount:
+                case DiscountTypeFlag.FixedAmount:
                     if (discount == null || !discount.HasValue)
                         throw new ArgumentException("The value cannot be null", nameof(discount));
 
@@ -105,10 +104,26 @@ namespace BikeDistributor
         /// Creates an object that represents ZERO discount
         /// </summary>
         /// <returns>The no discount object.</returns>
-        public static DiscountInfo CreateNoDiscountObj()
+        public static DiscountInfo CreateDiscountZeroAmount()
         {
             return new DiscountInfo(DiscountInfo.DiscountTypeFlag.None, null, null);
         }
+
+        public static DiscountInfo CreateDiscountPercentage(decimal percentage)
+        {
+            return new DiscountInfo(DiscountTypeFlag.Percentage, percentage, null);
+        }
+
+        public static DiscountInfo CreateDiscountFixedAmount(decimal flatAmount)
+        {
+            return new DiscountInfo(DiscountTypeFlag.FixedAmount, flatAmount, null);
+        }
+
+        public static DiscountInfo CreateDiscountJavaScriptExpresion(string jsexpression)
+        {
+            return new DiscountInfo(DiscountTypeFlag.Expression, null, jsexpression);
+        }
+
 
         /// <summary>
         /// <see cref="T:BikeDistributor.DiscountInfo.DiscountTypeFlag"/>

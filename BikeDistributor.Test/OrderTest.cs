@@ -40,16 +40,16 @@ switch(Bike.Model)
 res;
 ";
 
-        private static BikeDiscounts JSDiscount = new BikeDiscounts(new(int, DiscountInfo)[] { (-1, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Expression, null, JS_Rule)) });
-        private static BikeDiscounts DiscountOneThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 20, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.1m, null) ) } );
-        private static BikeDiscounts DiscountTwoThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 10, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.2m, null)) } );
-        private static BikeDiscounts DiscountFiveThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 5, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.2m, null)) });
-        private static BikeDiscounts FlatDiscount = new BikeDiscounts( new(int, DiscountInfo)[] { ( 1, new DiscountInfo(DiscountInfo.DiscountTypeFlag.FlatDiscount, 234.00m, null)) });
+        private static BikeDiscounts JSDiscount = new BikeDiscounts(new(int, DiscountInfo)[] { (-1, DiscountInfo.CreateDiscountJavaScriptExpresion(JS_Rule)) });
+        private static BikeDiscounts DiscountOneThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 20, DiscountInfo.CreateDiscountPercentage(0.1m) ) } );
+        private static BikeDiscounts DiscountTwoThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 10, DiscountInfo.CreateDiscountPercentage(0.2m) ) } );
+        private static BikeDiscounts DiscountFiveThousand = new BikeDiscounts( new(int, DiscountInfo)[] { ( 5, DiscountInfo.CreateDiscountPercentage(0.2m) ) });
+        private static BikeDiscounts FlatDiscount = new BikeDiscounts( new(int, DiscountInfo)[] { ( 1, DiscountInfo.CreateDiscountFixedAmount(234.00m) ) });
         private static BikeDiscounts MultipleDiscount = new BikeDiscounts( new(int, DiscountInfo)[] {
-            ( 2, new DiscountInfo(DiscountInfo.DiscountTypeFlag.FlatDiscount, 234.00m, null)),
-            ( 4, new DiscountInfo(DiscountInfo.DiscountTypeFlag.FlatDiscount, 345.67m, null)),
-            ( 6, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.2m, null)),
-            ( 8, new DiscountInfo(DiscountInfo.DiscountTypeFlag.Percentage, 0.3m, null))
+            ( 2, DiscountInfo.CreateDiscountFixedAmount(234.00m) ),
+            ( 4, DiscountInfo.CreateDiscountFixedAmount(345.67m) ),
+            ( 6, DiscountInfo.CreateDiscountPercentage(0.2m) ),
+            ( 8, DiscountInfo.CreateDiscountPercentage(0.3m) )
         });
 
         private readonly static Bike Defy = new Bike("Giant", "Defy 1", OneThousand, DiscountOneThousand);

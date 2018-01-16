@@ -26,7 +26,7 @@ namespace BikeDistributor
                     TotalDiscountPercentage = 0m;
                     break;
 
-                case DiscountInfo.DiscountTypeFlag.FlatDiscount:
+                case DiscountInfo.DiscountTypeFlag.FixedAmount:
                     // Dollar amount
                     UnitDiscountAmount = Math.Round(di.Discount.Value, 2);
                     TotalDiscountAmount = Math.Round(UnitDiscountAmount * quantity, 2);

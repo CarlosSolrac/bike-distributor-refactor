@@ -585,7 +585,7 @@
           "DiscountObj": {
             "Discounts": {
               "1": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               }
@@ -709,12 +709,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -747,12 +747,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -785,12 +785,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -823,12 +823,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -861,12 +861,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -899,12 +899,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -937,12 +937,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -975,12 +975,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
@@ -1013,12 +1013,12 @@
           "DiscountObj": {
             "Discounts": {
               "2": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 234.00,
                 "Expression": null
               },
               "4": {
-                "DiscountType": "FlatDiscount",
+                "DiscountType": "FixedAmount",
                 "Discount": 345.67,
                 "Expression": null
               },
